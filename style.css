@@ -40,7 +40,6 @@ h1 {
 #phaser-game {
   width: 100%;
   max-width: 1280px;
-  height: 80vh; /* Adjust as needed */
   background-color: #000;
   margin: 0 auto;
 }
