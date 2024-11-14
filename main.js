@@ -93,7 +93,7 @@ const y = Int.const('y');
 const insideFenceArray = [];
 await findAllSolutions(
     new Solver(),
-    And(x.gt(5), x.lt(10), y.gt(15), y.lt(25)),
+    And(x.gt(21), x.lt(29), y.gt(17), y.lt(20)),
     insideFenceArray
 );
 console.log("Inside the fence:", insideFenceArray);
@@ -104,10 +104,10 @@ const onFenceArray = [];
 await findAllSolutions(
     new Solver(),
     Or(
-        And(x.eq(5), y.ge(15), y.le(25)),
-        And(x.eq(10), y.ge(15), y.le(25)),
-        And(y.eq(15), x.ge(5), x.le(10)),
-        And(y.eq(25), x.ge(5), x.le(10))
+        And(x.eq(21), y.ge(17), y.le(20)),
+        And(x.eq(29), y.ge(17), y.le(20)),
+        And(y.eq(17), x.ge(21), x.le(29)),
+        And(y.eq(20), x.ge(21), x.le(29))
     ),
     onFenceArray
 );
@@ -119,15 +119,19 @@ const outFenceArray = [];
 await findAllSolutions(
     new Solver(),
     And(
-      Or(x.lt(5), x.gt(10)),
-      Or(y.lt(15), y.gt(25)),
-      x.ge(0), x.lt(15),
-      y.ge(0), y.lt(30)
+      Or(x.lt(21), x.gt(29)),
+      Or(y.lt(17), y.gt(20)),
+      x.ge(0), x.lt(39),
+      y.ge(0), y.lt(24)
     ),
     outFenceArray
 );
 console.log("Outside the fence:", outFenceArray);
 appendArrayToApp("Outside the fence:", outFenceArray);
+
+export function getRandomCoordinateInsideFench() {
+    return insideFenceArray[Math.random() * insideFenceArray.length];
+}
 
 // document.querySelector('#app').innerHTML += `
 //   <div>
