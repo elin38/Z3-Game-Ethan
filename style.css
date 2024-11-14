@@ -39,11 +39,8 @@ h1 {
 /* Styling the Phaser game container */
 #phaser-game {
   width: 100%;
-<<<<<<< HEAD
-=======
   max-width: 1280px;
   height: 80vh; /* Adjust as needed */
->>>>>>> cafe4d30cc006237bfe30d6ea417158ee9b89d06
   background-color: #000;
   margin: 0 auto;
 }
