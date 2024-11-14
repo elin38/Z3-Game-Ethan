@@ -25,7 +25,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -35,11 +36,21 @@ h1 {
   line-height: 1.1;
 }
 
+/* Styling the Phaser game container */
+#phaser-game {
+  width: 100%;
+  background-color: #000;
+  margin: 0 auto;
+}
+
+/* Styling the app section below the game */
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .logo {
@@ -82,6 +93,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Light mode adjustments */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -92,5 +104,9 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+  #app {
+    background-color: #f9f9f9;
+    color: #213547;
   }
 }
